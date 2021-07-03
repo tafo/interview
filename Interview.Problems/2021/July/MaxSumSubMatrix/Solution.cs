@@ -8,42 +8,38 @@ namespace Interview.Problems._2021.July.MaxSumSubMatrix
     {
         public int MaxSumSubmatrix(int[][] matrix, int k)
         {
-            var currentMax = MaxSubArraySum(matrix[0]);
-            if (matrix.Length == 1)
-            {
-                return currentMax;
-            }
+            var output = new List<int>();
 
-            var output = currentMax;
-
-            for (var i = 0; i < matrix.Length - 1; i++)
+            for (var i = 0; i < matrix.Length; i++)
             {
-                var summingArray = matrix[i];
-                output = Math.Max(output, MaxSubArraySum(summingArray));
+                var rectangle = matrix[i];
+                output.AddRange(GetSumListOfRectangles(rectangle));
                 for (var j = i + 1; j < matrix.Length; j++)
                 {
-                    summingArray = summingArray.Zip(matrix[j], (x, y) => x + y).ToArray();
-                    currentMax = MaxSubArraySum(summingArray);
-                    output = Math.Max(output, currentMax);
+                    rectangle = rectangle.Zip(matrix[j], (x, y) => x + y).ToArray();
+                    output.AddRange(GetSumListOfRectangles(rectangle));
                 }
             }
 
-            return output;
+            var filteredList = output.Where(x => x <= k).ToList();
 
-            int MaxSubArraySum(IReadOnlyList<int> arr)
+            return filteredList.Max();
+
+            static IEnumerable<int> GetSumListOfRectangles(IReadOnlyList<int> arr)
             {
-                var result = arr[0];
-                var max = arr[0];
-                for (var i = 1; i < arr.Count; i++)
+                var resultList = new List<int>();
+                for (var i = 0; i < arr.Count; i++)
                 {
-                    max = Math.Max(arr[i], max + arr[i]);
-                    if (max <= k)
+                    var sum = arr[i];
+                    resultList.Add(sum);
+                    for (var j = i + 1; j < arr.Count; j++)
                     {
-                        result = Math.Max(result, max);
+                        sum += arr[j];
+                        resultList.Add(sum);
                     }
                 }
 
-                return result;
+                return resultList;
             }
         }
     }
