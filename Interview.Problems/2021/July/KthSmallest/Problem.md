@@ -1,4 +1,4 @@
-﻿REMOVE ALL ADJACENT DUPLICATES IN STRING
+﻿KTH SMALLEST ELEMENT IN A SORTED MATRIX
 
 Given an n x n matrix where each of the rows and columns are sorted in ascending order, return the kth smallest element in the matrix.
 
