@@ -31,7 +31,7 @@ n == matrix[i].length
 
 -100 <= matrix[i][j] <= 100
 
--105 <= k <= 105
+-10^5 <= k <= 10^5
  
 
 Follow up: What if the number of rows is much larger than the number of columns?
