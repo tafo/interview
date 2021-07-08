@@ -43,8 +43,38 @@ namespace Interview.Problems._2021.July.CountVowelPermutation
             },
             new object[]
             {
-                5,
-                68,
+                4,
+                35,
+            },
+            new object[]
+            {
+                8,
+                474,
+            },
+            new object[]
+            {
+                16,
+                85691,
+            },
+            new object[]
+            {
+                32,
+                789289148,
+            },
+            new object[]
+            {
+                64,
+                439539116,
+            },
+            new object[]
+            {
+                128,
+                388863806,
+            },
+            new object[]
+            {
+                256,
+                153577260,
             },
         };
     }
