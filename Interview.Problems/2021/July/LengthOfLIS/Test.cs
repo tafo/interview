@@ -2,7 +2,6 @@
 using System.Diagnostics;
 using System.Linq;
 using FluentAssertions;
-using Interview.Problems._2021.July.FindLength;
 using Xunit;
 using Xunit.Abstractions;
 
