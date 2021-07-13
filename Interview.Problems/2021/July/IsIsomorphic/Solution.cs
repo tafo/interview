@@ -3,6 +3,9 @@ using System.Linq;
 
 namespace Interview.Problems._2021.July.IsIsomorphic
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Solution
     {
         public bool IsIsomorphic(string s, string t)
