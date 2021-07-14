@@ -1,33 +1,32 @@
-﻿ISOMORPHIC STRINGS
+﻿FIND PEAK ELEMENT
 
-Given two strings s and t, determine if they are isomorphic.
+A peak element is an element that is strictly greater than its neighbors.
 
-Two strings s and t are isomorphic if the characters in s can be replaced to get t.
+Given an integer array nums, find a peak element, and return its index. 
 
-All occurrences of a character must be replaced with another character while preserving the order of characters. 
+If the array contains multiple peaks, return the index to any of the peaks.
 
-No two characters may map to the same character, but a character may map to itself.
+You may imagine that nums[-1] = nums[n] = -∞.
+
+You must write an algorithm that runs in O(log n) time. 
 
 Example 1:
 ```
-Input: s = "egg", t = "add"
-Output: true
+Input: nums = [1,2,3,1]
+Output: 2
+Explanation: 3 is a peak element and your function should return the index number 2.
 ```
 
 Example 2:
 ```
-Input: s = "foo", t = "bar"
-Output: false
-```
-Example 3:
-```
-Input: s = "paper", t = "title"
-Output: true
+Input: nums = [1,2,```1,3,5,6,4]
+Output: 5
+Explanation: Your function can return either index number 1 where the peak element is 2, or index number 5 where the peak element is 6.
 ```
 
 Constraints:
 ```
-1 <= s.length <= 5 * 104
-t.length == s.length
-s and t consist of any valid ascii character.
+1 <= nums.length <= 1000
+-231 <= nums[i] <= 231 - 1
+nums[i] != nums[i + 1] for all valid i.
 ```

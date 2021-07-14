@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Interview.Problems._2021.July.FindPeekElement
+﻿namespace Interview.Problems._2021.July.FindPeakElement
 {
     public class SolutionBinarySearch
     {

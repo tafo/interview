@@ -5,7 +5,7 @@ using FluentAssertions;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace Interview.Problems._2021.July.FindPeekElement
+namespace Interview.Problems._2021.July.FindPeakElement
 {
     public class Test
     {
