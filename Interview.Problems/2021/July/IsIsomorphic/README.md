@@ -1,4 +1,4 @@
-﻿FIND PEAK ELEMENT
+﻿Isomorphic Strings
 
 A peak element is an element that is strictly greater than its neighbors.
 
